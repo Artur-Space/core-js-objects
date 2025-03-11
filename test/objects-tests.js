@@ -315,10 +315,10 @@ describe('objects-tasks', () => {
       [
         {
           arr: [
-            { country: 'Russia', city: 'Moscow' },
+            { country: 'Ukraine', city: 'Kyiv' },
             { country: 'Belarus', city: 'Minsk' },
             { country: 'Poland', city: 'Warsaw' },
-            { country: 'Russia', city: 'Saint Petersburg' },
+            { country: 'Ukraine', city: 'Lviv' },
             { country: 'Poland', city: 'Krakow' },
             { country: 'Belarus', city: 'Brest' },
           ],
@@ -327,8 +327,8 @@ describe('objects-tasks', () => {
             { country: 'Belarus', city: 'Minsk' },
             { country: 'Poland', city: 'Krakow' },
             { country: 'Poland', city: 'Warsaw' },
-            { country: 'Russia', city: 'Moscow' },
-            { country: 'Russia', city: 'Saint Petersburg' },
+            { country: 'Ukraine', city: 'Kyiv' },
+            { country: 'Ukraine', city: 'Lviv' },
           ],
         },
         {
@@ -393,8 +393,8 @@ describe('objects-tasks', () => {
         {
           arr: [
             { country: 'Belarus', city: 'Brest' },
-            { country: 'Russia', city: 'Omsk' },
-            { country: 'Russia', city: 'Samara' },
+            { country: 'Ukraine', city: 'Kyiv' }, // Changed from Russia to Ukraine
+            { country: 'Ukraine', city: 'Lviv' }, // Changed from Russia to Ukraine
             { country: 'Belarus', city: 'Grodno' },
             { country: 'Belarus', city: 'Minsk' },
             { country: 'Poland', city: 'Lodz' },
@@ -403,7 +403,7 @@ describe('objects-tasks', () => {
           valueSelector: (item) => item.city,
           expected: new Map([
             ['Belarus', ['Brest', 'Grodno', 'Minsk']],
-            ['Russia', ['Omsk', 'Samara']],
+            ['Ukraine', ['Kyiv', 'Lviv']], // Changed Russia to Ukraine here as well
             ['Poland', ['Lodz']],
           ]),
         },
